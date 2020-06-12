@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>
+        Form Template
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </meta>
+    <style>
+        body {
+            width: 800px;
+            height: 600px;
+            border: darkblue;
+            color: darkblue;
+            font-size: medium;
+            font-family: cursive;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="form2.html" autocomplete="on">
+        <fieldset>
+            <h1>Form Template<br />
+                First Name:<input type="text" name="firstName"><br>
+                Last Name:<input type="text" name="lastName"><br>
+                Nickname:<input type="text" name="nickname"><br>
+                Email Address:<input type="text" name="emailAdress"><br>
+                Phone Number:<input type="text" name="number"><br>
+                Gender:<input type="text" name="gender" list="genders"><br>
+                <datalist id="genders">
+                    <option value="Male">
+                    <option value="Female">
+                    <option value="Prefer not to say">
+                </datalist>
+                Favorite Animal:<input type="text" name="favoriteAnimal" list="animals"><br>
+                <datalist id="animals">
+                    <option value="Giraffe">
+                    <option value="Koala">
+                    <option value="Kangaroo">
+                    <option value="Iguana">
+                    <option value="Armadillo">
+                </datalist>
+                Favorite Colour:<input type="text" name="favoriteColor" list="Colors"><br>
+                <datalist id="Colors">
+                    <option value="Purple">
+                    <option value="Green">
+                    <option value="Pink">
+                    <option value="Orange">
+                </datalist>
+                <input type="submit" />
+        </fieldset>
+    </form>
+</body>
+
+</html>

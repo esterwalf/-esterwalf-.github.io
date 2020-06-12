@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>
+        Basic framework
+    </title>
+    <style>
+        body{background-color: beige;
+        border: double;
+        font-family: fantasy;
+        height: 800px;
+        width: 1000px;
+        text-align: center;
+        }
+        button{margin: 10px;
+        }
+        div{font-size: x-large;}
+    </style>
+    <script>
+        function init() {
+            output = document.getElementById("output");
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <script>
+        function count() {
+            output.innerHTML = " ";
+            for (i = 1; i <= 10; i++) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+        function back() {
+            output.innerHTML = " ";
+            for (i = 10; i > 0; i--) {
+                output.innerHTML += i + "<br/>";
+            }
+        }
+        function byTwo() {
+            output.innerHTML = " ";
+            for (i = 2; i <= 20; i += 2) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+        function byThree() {
+            output.innerHTML = " ";
+            for (i = 3; i <= 30; i += 3) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+        function byFour() {
+            output.innerHTML = " ";
+            for (i = 4; i <= 40; i += 4) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+        function byFive() {
+            output.innerHTML = " ";
+            for (i = 5; i <= 50; i += 5) {
+                output.innerHTML += i + "<br/>";
+            }
+        }
+        function bySix() {
+            output.innerHTML = " ";
+            for (i = 6; i <= 60; i += 6) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+        function bySeven() {
+            output.innerHTML = " ";
+            for (i = 7; i <= 70; i += 7) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+        function byEight() {
+            output.innerHTML = " ";
+            for (i = 8; i <= 80; i += 8) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+        function byNine() {
+            output.innerHTML = " ";
+            for (i = 9; i <= 90; i += 9) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+        function byTen() {
+            output.innerHTML = " ";
+            for (i = 10; i <= 100; i += 10) {
+                output.innerHTML += i + "<br>";
+            }
+        }
+    </script>
+    <h1>
+        click on a button to count
+    </h1>
+    <form action=" ">
+        <fieldset>
+            <button type="button" onclick="count()">+1</button>
+            <button type="button" onclick="back()">-1</button>
+            <button type="button" onclick="byTwo()">x2</button>
+            <button type="button" onclick="byThree()">X3</button>
+            <button type="button" onclick="byFour()">X4</button>
+            <button type="button" onclick="byFive()">X5</button>
+            <button type="button" onclick="bySix()">X6</button>
+            <button type="button" onclick="bySeven()">X7</button>
+            <button type="button" onclick="byEight()">X8</button>
+            <button type="button" onclick="byNine()">X9</button>
+            <button type="button" onclick="byTen()">X10</button>
+        </fieldset>
+    </form>
+    <div id="output">
+        click a button to count
+    </div>
+</body>
+
+</html>

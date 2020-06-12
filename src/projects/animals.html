@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>
+        Animals
+    </title>
+    <style>
+        body{background-color: lightgreen;
+        border-style: groove;
+        width: 800px;
+        height: 500px;
+        font-size: medium;
+        font-family: cursive;
+        text-align: center;
+        }
+    </style>
+    <script>
+        function animal() {
+            this.eyes = 2;
+            this.legs = 4;
+            this.tail = 1;
+            this.ears = 2;
+            this.noise = " ";
+            this.food = " ";
+            this.baby=" ";
+            this.male=" ";
+        }
+        function displaypPigPorperties() {
+            Pig = new animal();
+            Pig.noise = " 'oink'";
+            Pig.food = " Omnivore";
+            Pig.baby= "Piglet";
+            Pig.male="Boar"
+            output = "Pig traits:<br>";
+            for (animalProperty in Pig) {
+                output += animalProperty + " " + Pig[animalProperty] + "<br>";
+            }
+            document.write(output);
+        }
+        function displayLionProperties() {
+            Lion = new animal();
+            Lion.noise = " 'roar'";
+            Lion.food = " Carnivore";
+            Lion.baby="Cub";
+            Lion.male="lion"
+            output = "Panthera Leo traits:<br>";
+            for (animalProperty in Lion) {
+                output += animalProperty + " " + Lion[animalProperty] + "<br>";
+            }
+            document.write(output);
+        };
+        function displayCowProperties() {
+            var Cow = new animal();
+            Cow.noise = " 'moo'";
+            Cow.food = " Herbivore";
+            Cow.baby="Calf";
+            Cow.male="Bull,Ox or Steer"
+            output = "Cow traits:<br>";
+            for (animalProperty in Cow) {
+                output += animalProperty + " " + Cow[animalProperty] + "<br>";
+            }
+            document.write(output);
+        };
+        function displayDogProperties() {
+            var Dog = new animal();
+            Dog.noise = " 'woof'";
+            Dog.food = "omnivore/carnivore";
+            Dog.baby="puppy";
+            Dog.male="Stud or Sire";
+            output = "Dog traits:<br>";
+            for (animalProperty in Dog) {
+                output += animalProperty + " " + Dog[animalProperty] + "<br>";
+            }
+            document.write(output);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>pick an animal</h1>
+    <button onclick="displaypPigPorperties()" type="button" id="Pig">
+    <img src="./animals/pig.png" height="200px" width="300px"></button>
+    <button onclick="displayLionProperties()" type="button" id="Lion">
+    <img src="./animals/lion.png" height="200px" width="300px"></button><br>
+    <button onclick="displayCowProperties()" type="button" id="Cow">
+    <img src="./animals/cow.png" height="200px" width="300px"></button>
+    <button onclick="displayDogProperties()" type="button" id="Dog">
+    <img src="./animals/dog.png" height="200px" width="300px"></button>
+</body>
+
+</html>

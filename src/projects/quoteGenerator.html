@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title> random generator</title>
+    <style>
+       body{background-color: lightgrey;
+       color: black;
+       border: black;
+       height:800px;
+       width: 1000px;
+       border-style: groove;
+       border-radius: 10px;
+       text-align: center;
+       font-size: large;}
+    </style>
+    <script>
+        function getRandomQuote() {
+            var randomQuote = [];
+            randomQuote[0] = "your limitation is only in your imagination";
+            randomQuote[1] = "the key to success is to focus on goals not obstacles";
+            randomQuote[2] = "if you want to see the rainbow, you've got to put up with the rain";
+            randomQuote[3] = "I finally realised that people are prisoners of their phones,'<br>' that's why it's called a 'cell'phone";
+            randomQuote[4] = "The biggest lie I tell myself is '<br>''I don't need to write that down, I'll remember it'";
+            var chosenRandom = Math.floor(Math.random() * 5);
+            this.chosenQuote = randomQuote[chosenRandom];
+            document.write(chosenQuote);
+        }
+        function getRandomCharacter(){
+            var randomCharacter=[];
+            randomCharacter[0]="Mulan";
+            randomCharacter[1]="Belle";
+            randomCharacter[2]="Quasimodo";
+            randomCharacter[3]="Sneezy";
+            var randomChosen=Math.floor(Math.random()*4);
+            this.chosenCharacter=randomCharacter[randomChosen];
+            document.write(chosenCharacter);
+        }
+    </script>
+</head>
+
+<body">
+    <h1>Click a picture</h1>
+    <button onclick="getRandomQuote()" type="button"><img src="./generator/quote.png" height="300px" width="400px"></button>
+    <button onclick="getRandomCharacter()" type="button"><img src="./generator/disney.png"height="300px" width="400px"></button>
+    </body>
+
+</html>

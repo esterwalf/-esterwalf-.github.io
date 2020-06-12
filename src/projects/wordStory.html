@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Word Story</title>
+    <style>
+        body {
+            background-color: lightpink;
+            border-style: dotted;
+            border-color: red;
+            border-radius: 4px;
+            width: 800px;
+            height: 500px;
+            text-align: center;
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+    <script type="text/javascript">
+        function tellStory() {
+            var txtBoy = document.getElementById("txtBoy");
+            var txtGirl = document.getElementById("txtGirl");
+            var txtGeol = document.getElementById("txtGeol");
+            var txtVerb = document.getElementById("txtVerb");
+            var txtContainer = document.getElementById("txtContainer");
+            var txtLiquid = document.getElementById("txtLiquid");
+            var txtPart = document.getElementById("txtPart");
+            var txtGerund = document.getElementById("txtGerund");
+            var output = document.getElementById("output");
+
+            var boy = txtBoy.value;
+            var girl = txtGirl.value;
+            var geol = txtGeol.value;
+            var verb = txtVerb.value;
+            var container = txtContainer.value;
+            var liquid = txtLiquid.value;
+            var part = txtPart.value;
+            var gerund = txtGerund.value;
+
+            var story = boy + " and " + girl + " went to the ";
+            story += geol + " to " + verb + " a " + container;
+            story += " of " + liquid + ". <br / > <br />";
+            story += boy + " fell and broke his " + part;
+            story += " and " + girl + " came " + gerund + " after.";
+            output.innerHTML = story;
+        }
+        function nursery() {
+            var txtAnimal = document.getElementById("txtAnimal")
+            var txtInstrument = document.getElementById("txtInstrument");
+            var txtObject = document.getElementById("txtObject");
+            var txtAdjective = document.getElementById("txtAdjective");
+            var txtVerb = document.getElementById("txtVerby");
+            var txtFurniture = document.getElementById("txtFurniture");
+            var txtItem = document.getElementById("txtItem");
+            var txtVerbs = document.getElementById("txtVerbs");
+            var Output = document.getElementById("Output");
+
+            var Animal = txtAnimal.value;
+            var Instrument = txtInstrument.value;
+            var Object = txtObject.value;
+            var Adjective = txtAdjective.value;
+            var Verb = txtVerb.value;
+            var furniture = txtFurniture.value;
+            var Item = txtItem.value;
+            var Verbs = txtVerbs.value;
+
+
+            var story = "the " + Animal + " and the " + Instrument + " jumped over the ";
+            story += Object + "<br><br>the " + Adjective + " dog " + Verb;
+            story += " to see such sport, and the " + furniture+"<br>";
+            story += Verbs + " away with the " + Item;
+            Output.innerHTML = story;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>wordStory</h1>
+    <form action=" " autocomplete="on">
+        <fieldset>
+            <label for="txtBoy">Boy's name</label>
+            <input type="text" id="txtBoy" />
+            <label for="txtGirl">Girl's name</label>
+            <input type="text" id="txtGirl" />
+            <label for="txtGeol">Geologic formation</label>
+            <input type="text" id="txtGeol" />
+            <label for="txtVerb">Verb</label>
+            <input type="text" id="txtVerb" />
+            <label for="container">container</label>
+            <input type="text" id="txtContainer" />
+            <label for="txtLiquid">liquid</label>
+            <input type="text" id="txtLiquid" />
+            <label for="txtPart">bodyPart</label>
+            <input type="text" id="txtPart" />
+            <label for="txtGerund">ing Verb</label>
+            <input type="text" id="txtGerund" />
+            <button onclick="tellStory()" type="button">tell story</button>
+        </fieldset>
+        <div id="output">
+        </div>
+        <fieldset>
+            <label for="txtAnimal">Animal</label>
+            <input type="text" id="txtAnimal" />
+            <label for="txtInstrument">Instrument</label>
+            <input type="text" id=txtInstrument />
+            <label for="txtObject">Object</label>
+            <input type="text" id="txtObject" />
+            <label for="txtAdjective">Adjective</label>
+            <input type="text" id="txtAdjective" />
+            <label for="txtVerby">Verb -ed</label>
+            <input type="text" id="txtVerby" />
+            <label type="txtFurniture">Furniture</label>
+            <input type="text" id="txtFurniture" />
+            <label for="txtItem">Item</label>
+            <input type="text" id="txtItem">
+            <label for="txtVerbs">verb past tense</label>
+            <input type="text" id="txtVerbs">
+            <button onclick="nursery()" type="button">tell story</button>
+        </fieldset>
+    </form>
+
+    <div id="Output"></div>
+</body>
+
+</html>
