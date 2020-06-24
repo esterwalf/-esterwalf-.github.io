@@ -4,88 +4,112 @@
     <title>
         Animals
     </title>
+    <link href=“Scale1.css” rel=“stylesheet” type=“text/css”>
     <style>
-        body{background-color: lightgreen;
-        border-style: groove;
-        width: 800px;
-        height: 500px;
-        font-size: medium;
-        font-family: cursive;
-        text-align: center;
+        #outer {
+            float: left;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        img {
+            -webkit-transition: -webkit-transform 1.0s ease;
+            -transition: transform 1.0s ease;
+        }
+        img.scaled:hover {
+            -webkit-transform: scale(1.25);
+            -transform: scale(1.25);
+        }
+
+        body {
+            background-color: lightgreen;
+            border-style: groove;
+            width: 1000px;
+            height: 800px;
+            font-size: medium;
+            font-family: cursive;
+            text-align: center;
         }
     </style>
     <script>
         function animal() {
-            this.eyes = 2;
-            this.legs = 4;
-            this.tail = 1;
-            this.ears = 2;
-            this.noise = " ";
-            this.food = " ";
-            this.baby=" ";
-            this.male=" ";
+            this.eyes = 2; this.legs = 4;
+            this.tail = 1; this.ears = 2;
+            this.noise = " "; this.food = " ";
+            this.baby = " "; this.male = " ";
         }
         function displaypPigPorperties() {
+            var output = document.getElementById("output");
             Pig = new animal();
             Pig.noise = " 'oink'";
             Pig.food = " Omnivore";
-            Pig.baby= "Piglet";
-            Pig.male="Boar"
-            output = "Pig traits:<br>";
+            Pig.baby = "Piglet";
+            Pig.male = "Boar"
+            Output = "Pig traits:<br>";
             for (animalProperty in Pig) {
-                output += animalProperty + " " + Pig[animalProperty] + "<br>";
+                Output += animalProperty + ": " + Pig[animalProperty] +"<br>";
             }
-            document.write(output);
+            output.innerHTML = Output;
         }
         function displayLionProperties() {
+            var output = document.getElementById("output");
             Lion = new animal();
             Lion.noise = " 'roar'";
             Lion.food = " Carnivore";
-            Lion.baby="Cub";
-            Lion.male="lion"
-            output = "Panthera Leo traits:<br>";
+            Lion.baby = "Cub";
+            Lion.male = "lion"
+            Output = "Panthera Leo traits:<br>";
             for (animalProperty in Lion) {
-                output += animalProperty + " " + Lion[animalProperty] + "<br>";
+                Output += animalProperty + ": " + Lion[animalProperty] + "<br>";
             }
-            document.write(output);
+            output.innerHTML = Output;
         };
         function displayCowProperties() {
+            var output = document.getElementById("output");
             var Cow = new animal();
             Cow.noise = " 'moo'";
             Cow.food = " Herbivore";
-            Cow.baby="Calf";
-            Cow.male="Bull,Ox or Steer"
-            output = "Cow traits:<br>";
+            Cow.baby = "Calf";
+            Cow.male = "Bull,Ox or Steer"
+            Output = "Cow traits:<br>";
             for (animalProperty in Cow) {
-                output += animalProperty + " " + Cow[animalProperty] + "<br>";
+                Output += animalProperty + ": " + Cow[animalProperty] + "<br>";
             }
-            document.write(output);
+            output.innerHTML = Output;
         };
         function displayDogProperties() {
+            var output = document.getElementById("output");
             var Dog = new animal();
             Dog.noise = " 'woof'";
             Dog.food = "omnivore/carnivore";
-            Dog.baby="puppy";
-            Dog.male="Stud or Sire";
-            output = "Dog traits:<br>";
+            Dog.baby = "puppy";
+            Dog.male = "Stud or Sire";
+            Output = "Dog traits:<br>";
             for (animalProperty in Dog) {
-                output += animalProperty + " " + Dog[animalProperty] + "<br>";
+                Output += animalProperty + ": " + Dog[animalProperty] + "<br>";
             }
-            document.write(output);
+            output.innerHTML = Output;
         }
     </script>
 </head>
 
 <body>
     <h1>pick an animal</h1>
+    <div id=“outer”></div>  
     <button onclick="displaypPigPorperties()" type="button" id="Pig">
-    <img src="./animals/pig.png" height="200px" width="300px"></button>
+        <img src="-esterwalf-.github.io/src/projects/animals/pig.png" height="200px" class="scaled"
+            width="300px"></button>
     <button onclick="displayLionProperties()" type="button" id="Lion">
-    <img src="./animals/lion.png" height="200px" width="300px"></button><br>
+        <img src="-esterwalf-.github.io/src/projects/animals/lion.png" height="200px" class="scaled"
+            width="300px"></button><br>
     <button onclick="displayCowProperties()" type="button" id="Cow">
-    <img src="./animals/cow.png" height="200px" width="300px"></button>
+        <img src="-esterwalf-.github.io/src/projects/animals/cow.png" height="200px" class="scaled"
+            width="300px"></button>
     <button onclick="displayDogProperties()" type="button" id="Dog">
-    <img src="./animals/dog.png" height="200px" width="300px"></button>
+        <img src="-esterwalf-.github.io/src/projects/animals/dog.png" class="scaled" height="200px"
+            width="300px"></button>
+            <div id="output"></div>
 </body>
 
 </html>
