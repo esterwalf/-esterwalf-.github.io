@@ -17,17 +17,38 @@
             background-color: lightblue;
             text-align: center;
         }
+
+        div {
+            font-size: medium;
+            background-color: lightblue;
+            text-align: center;
+            font-family: fantasy;
+        }
     </style>
+    <script>
+        function checkEmail() {
+            var output = document.getElementById("output");
+            var email = document.getElementById("email");
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+                return (true);
+            }
+            output.innerHTML = "You have entered an invalid email address!";
+            return (false);
+        }
+
+    </script>
 </head>
 
 <body>
+
     <form action="form2.html" autocomplete="on">
         <fieldset>
             <h1>Form Template<br />
                 First Name:<input type="text" name="firstName"><br>
                 Last Name:<input type="text" name="lastName"><br>
                 Nickname:<input type="text" name="nickname"><br>
-                Email Address:<input type="text" name="emailAdress"><br>
+                Email Address:<input type="text" id="email" onblur="checkEmail(this);">
+                <div id="output"></div>
                 Phone Number:<input type="text" name="number"><br>
                 Gender:<input type="text" name="gender" list="genders"><br>
                 <datalist id="genders">
@@ -50,7 +71,9 @@
                     <option value="Pink">
                     <option value="Orange">
                 </datalist>
+
                 <input type="submit" />
+
         </fieldset>
     </form>
 </body>
