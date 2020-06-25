@@ -3,45 +3,53 @@
 <head>
     <title> random generator</title>
     <style>
-       body{background-color: lightgrey;
-       color: black;
-       border: black;
-       height:800px;
-       width: 1000px;
-       border-style: groove;
-       border-radius: 10px;
-       text-align: center;
-       font-size: large;}
+        body {
+            background-color: lightgrey;
+            color: black;
+            border: black;
+            height: 800px;
+            width: 1000px;
+            border-style: groove;
+            border-radius: 10px;
+            text-align: center;
+            font-size: large;
+        }
     </style>
     <script>
         function getRandomQuote() {
+            var output = document.getElementById("output");
             var randomQuote = [];
             randomQuote[0] = "your limitation is only in your imagination";
-            randomQuote[1] = "the key to success is to focus on goals not obstacles";
-            randomQuote[2] = "if you want to see the rainbow, you've got to put up with the rain";
-            randomQuote[3] = "I finally realised that people are prisoners of their phones,'<br>' that's why it's called a 'cell'phone";
-            randomQuote[4] = "The biggest lie I tell myself is '<br>''I don't need to write that down, I'll remember it'";
-            var chosenRandom = Math.floor(Math.random() * 5);
+            randomQuote[1] = "The biggest lie I tell myself is '<br>''I don't need to write that down, I'll remember it'";;
+            randomQuote[2] = "I finally realised that people are prisoners of their phones,'<br>' that's why it's called a 'cell'phone";
+            randomQuote[3] = "the key to success is to focus on goals not obstacles";
+            var chosenRandom = Math.floor(Math.random() * 4);
             this.chosenQuote = randomQuote[chosenRandom];
-            document.write(chosenQuote);
+            output.innerHTML = this.chosenQuote;
         }
-        function getRandomCharacter(){
-            var randomCharacter=[];
-            randomCharacter[0]="Mulan";
-            randomCharacter[1]="Belle";
-            randomCharacter[2]="Quasimodo";
-            randomCharacter[3]="Sneezy";
-            var randomChosen=Math.floor(Math.random()*4);
-            this.chosenCharacter=randomCharacter[randomChosen];
-            document.write(chosenCharacter);
+        document.onload = function () {
+            function randomIndex() {
+                var randomChosen = Math.floor(Math.random() * 4);
+                return randomChosen;
+            }
+            var randomCharacter = ["mulan", "sneezy", "quasimodo", "belle"];
+            var output = document.getElementById("output");
+            var characterImage = document.createElement("img");
+            characterImage.setAttribute("width", "304");
+            characterImage.setAttribute("height", "228");
+            characterImage.setAttribute("src", "./generator/" + randomCharacter[randomIndex()] + ".png");
+            output.appendChild(characterImage);
         }
     </script>
 </head>
 
-<body">
+<body>
     <h1>Click a picture</h1>
-    <button onclick="getRandomQuote()" type="button"><img src="./generator/quote.png" height="300px" width="400px"></button>
-    <button onclick="getRandomCharacter()" type="button"><img src="./generator/disney.png"height="300px" width="400px"></button>
-    </body>
+    <button onclick="getRandomQuote()" type="button"><img src="./generator/quote.png"
+            height="300px" width="400px"></button>
+    <button onclick="document.onload()" type="button"><img src="./generator/disney.png"
+            height="300px" width="400px"></button>
+    <div id="output"></div>
+</body>
 
 </html>
